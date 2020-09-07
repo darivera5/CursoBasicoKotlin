@@ -1,8 +1,32 @@
+import Model.Camera
+import Model.Movie
+import Model.Shoe
+
 // No se puede colocar a una Varible local - Son globales
 const val N = "NAME"
 // var es una mala practica de programación
 
 fun main(args: Array<String>) {
+
+    val camera = Camera()
+    camera.turnOff()
+    println(camera.getCameraStatus())
+
+    camera.setResolution(5550)
+    println("resolution: ${camera.getResolution()}")
+
+    val shoe = Shoe()
+    shoe.size = 33
+    println(shoe.size)
+
+    shoe.model = "Tenis"
+    println(shoe.model)
+
+    val movie = Movie("Coco","Pixar",120)
+    println(movie.creator)
+    println(movie.title)
+    println(movie.duration)
+
     println("Hola mundo");
 
     // Variables de tipo local para tiempo de ejecución
